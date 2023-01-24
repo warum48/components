@@ -84,34 +84,38 @@ function SearchBar(_ref4) {
       searchVar((_inputRef$current = inputRef.current) === null || _inputRef$current === void 0 ? void 0 : _inputRef$current.value);
     }
   };
-  return <_Box.default sx={{
-    display: "flex",
-    maxHeight: "90px",
-    my: 2
-  }}>
-      <Search>
-        <SearchIconWrapper>
-          <_Search.default />
-        </SearchIconWrapper>
-        <StyledInputBase ref={inputRef} fullWidth placeholder="…" inputProps={{
-        "aria-label": "search"
-      }} defaultValue={searchVar()} onChange={e => {
-        inputRef.current.value = e.target.value;
-      }} onKeyPress={handleKeypress} sx={{
-        fontSize: theme.typography.body2.fontSize,
-        border: 1,
-        borderColor: "hsl(0, 0%, 80%)",
-        //"grey.300", //like in ReactSelect
-        borderRadius: 1
-      }}
-      //!!!---instant update---//onChange={e => {if(e.target.value.length > 2 || e.target.value.length==0){searchInputVar(e.target.value)}}}
-      />
-      </Search>
-      <_StyledButton.StyledButton type="submit" variant="contained" onClick={() => {
+  return /*#__PURE__*/React.createElement(_Box.default, {
+    sx: {
+      display: "flex",
+      maxHeight: "90px",
+      my: 2
+    }
+  }, /*#__PURE__*/React.createElement(Search, null, /*#__PURE__*/React.createElement(SearchIconWrapper, null, /*#__PURE__*/React.createElement(_Search.default, null)), /*#__PURE__*/React.createElement(StyledInputBase, {
+    ref: inputRef,
+    fullWidth: true,
+    placeholder: "\u2026",
+    inputProps: {
+      "aria-label": "search"
+    },
+    defaultValue: searchVar(),
+    onChange: e => {
+      inputRef.current.value = e.target.value;
+    },
+    onKeyPress: handleKeypress,
+    sx: {
+      fontSize: theme.typography.body2.fontSize,
+      border: 1,
+      borderColor: "hsl(0, 0%, 80%)",
+      //"grey.300", //like in ReactSelect
+      borderRadius: 1
+    }
+    //!!!---instant update---//onChange={e => {if(e.target.value.length > 2 || e.target.value.length==0){searchInputVar(e.target.value)}}}
+  })), /*#__PURE__*/React.createElement(_StyledButton.StyledButton, {
+    type: "submit",
+    variant: "contained",
+    onClick: () => {
       var _inputRef$current2;
       return searchVar((_inputRef$current2 = inputRef.current) === null || _inputRef$current2 === void 0 ? void 0 : _inputRef$current2.value);
-    }}>
-        Искать
-      </_StyledButton.StyledButton>
-    </_Box.default>;
+    }
+  }, "\u0418\u0441\u043A\u0430\u0442\u044C"));
 }

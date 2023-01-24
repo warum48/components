@@ -51,9 +51,10 @@ const GoToTop = _ref => {
       behavior: "smooth"
     });
   };
-  return <TopButton onClick={goToTop} show={show}>
-      <_KeyboardArrowUp.default />
-    </TopButton>;
+  return /*#__PURE__*/React.createElement(TopButton, {
+    onClick: goToTop,
+    show: show
+  }, /*#__PURE__*/React.createElement(_KeyboardArrowUp.default, null));
 };
 
 //custom setInterval
