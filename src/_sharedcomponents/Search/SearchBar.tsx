@@ -52,7 +52,7 @@ interface IProps{
    * используется параметром в query,
    * также сохраняется в Apollo State и читается при новом рендере при переключении раздела если поиск был уже задан ранее
    */
-  searchVar: (arg?:string)=>any//{}//any;
+  searchVar: any; //(arg?:string)=>any//{}//any;
 }
 
 export  function SearchBar({searchVar}:IProps) {
