@@ -1,6 +1,5 @@
 "use strict";
 
-require("core-js/modules/es.object.assign.js");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -8,7 +7,6 @@ exports.StyledButton = void 0;
 var _material = require("@mui/material");
 var _styles = require("@mui/material/styles");
 const _excluded = ["appearance"];
-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 const StyledButtonMain = (0, _styles.styled)(_material.Button)(_ref => {
@@ -42,20 +40,16 @@ const StyledButton = _ref2 => {
     }*/
 
   if (appearance === "smallwhite") {
-    return /*#__PURE__*/React.createElement(_material.Button, _extends({
-      size: "small",
-      variant: "outlined",
-      sx: {
-        color: "white",
-        fontSize: "10px",
-        px: 1.2,
-        mx: 0.5,
-        minWidth: "10px"
-      }
-    }, props));
+    return <_material.Button size="small" variant="outlined" sx={{
+      color: "white",
+      fontSize: "10px",
+      px: 1.2,
+      mx: 0.5,
+      minWidth: "10px"
+    }} {...props} />;
   }
 
   //default
-  return /*#__PURE__*/React.createElement(StyledButtonMain, props);
+  return <StyledButtonMain {...props} />;
 };
 exports.StyledButton = StyledButton;

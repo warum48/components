@@ -23,23 +23,18 @@ const CollapseButton = _ref => {
     isCollapsed = false
   } = _ref;
   const theme = (0, _styles.useTheme)();
-  return /*#__PURE__*/React.createElement(_material.Box, {
-    onClick: onClick,
-    sx: _objectSpread({
-      border: "1px solid",
-      borderRadius: "5px",
-      borderColor: "hsl(0, 0%, 80%)",
-      px: 1,
-      cursor: "pointer"
-    }, sx)
-  }, isCollapsed ? /*#__PURE__*/React.createElement(_ArrowDropDown.default, {
-    sx: {
+  return <_material.Box onClick={onClick} sx={_objectSpread({
+    border: "1px solid",
+    borderRadius: "5px",
+    borderColor: "hsl(0, 0%, 80%)",
+    px: 1,
+    cursor: "pointer"
+  }, sx)}>
+      {isCollapsed ? <_ArrowDropDown.default sx={{
       display: "block"
-    }
-  }) : /*#__PURE__*/React.createElement(_ArrowDropUp.default, {
-    sx: {
+    }} /> : <_ArrowDropUp.default sx={{
       display: "block"
-    }
-  }));
+    }} />}
+    </_material.Box>;
 };
 exports.CollapseButton = CollapseButton;
