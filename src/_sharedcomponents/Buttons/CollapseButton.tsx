@@ -1,15 +1,15 @@
+import * as React from "react";
 import { Box, Paper } from "@mui/material";
 import { styled, SxProps, useTheme } from "@mui/material/styles";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import * as React from "react";
-//import { opaque_bg, panel_bg } from "_mui/MuiStyledComponents";
+import { opaque_bg, panel_bg } from "_mui/MuiStyledComponents";
 
 /*export const CollapseButton = styled(Box)(({ theme }) => ({
     padding: theme.spacing(2),
   }));
   */
-export interface IProps  {
+export type IProps = {
   isCollapsed: boolean;
   /**
    * Дополнительные стили, удобно использовать для позиционирования
@@ -37,7 +37,7 @@ export const CollapseButton = ({
         borderColor: "hsl(0, 0%, 80%)",
         px: 1,
         cursor: "pointer",
-       // ...opaque_bg[theme.palette.mode],
+        ...opaque_bg[theme.palette.mode],
         ...sx,
       }}
     >

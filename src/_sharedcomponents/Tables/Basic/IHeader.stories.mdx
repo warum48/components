@@ -1,0 +1,28 @@
+import { Meta, Story, Description } from '@storybook/addon-docs';
+
+
+<Meta title='Components/Tables/Basic/TableTemplate/IHeader' />
+
+### IHeader
+
+Ƭ **IHeader**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `field` | `string` | Обращение к полю в JSON, может быть вложенным ^ например, field: "good.name" |
+| `func?` | (`st`: `string` \| `boolean`) => `string` | Функция преобразования полученного значения в видимую строку, например: func: (st) => (st === true ? "Есть в отчете" : "Товара нет в отчете"), |
+| `funcStyle?` | (`{}`: `any` \| `string`) => { `[key: string]`: `any`;  } | Функция стилизации (раскраски) ячейки в зависимости от значения |
+| `headerName` | `string` | Видимое название поля |
+| `type?` | ``"string"`` \| ``"image"`` | В ячейка может быть картинка, надо для этого указать type=image, по дефолту string |
+
+#### Defined in
+
+src/_sharedcomponents/Tables/Basic/IHeader.ts:1
+
+<!--
+<Description>{require('./IHeader.md')}</Description>
+
+<Description>{require('../../../../mddocs/modules/sharedcomponents_Tables_Basic_IHeader.md').replace('a','O')}</Description>
+-->

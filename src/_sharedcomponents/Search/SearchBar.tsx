@@ -3,11 +3,9 @@ import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-import { StyledButton } from "../Buttons/StyledButton";
-
-//import { panel_bg} from "_mui/MuiStyledComponents";
+import { panel_bg} from "_mui/MuiStyledComponents";
 //import { searchInputVar } from "_apollo/state";
-//import { StyledButton } from "../Buttons/StyledButton";
+import { StyledButton } from "../Buttons/StyledButton";
 
 const Search = styled(Box)(({ theme }) => ({
   position: "relative",
@@ -16,7 +14,7 @@ const Search = styled(Box)(({ theme }) => ({
   marginRight: theme.spacing(2),
   width: "100%",
   maxWidth: "500px",
-  //...panel_bg[theme.palette.mode],
+  ...panel_bg[theme.palette.mode],
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
@@ -53,7 +51,7 @@ interface IProps{
    * используется параметром в query,
    * также сохраняется в Apollo State и читается при новом рендере при переключении раздела если поиск был уже задан ранее
    */
-  searchVar: any; //(arg?:string)=>any//{}//any;
+  searchVar: (arg?:string)=>any//{}//any;
 }
 
 export  function SearchBar({searchVar}:IProps) {
